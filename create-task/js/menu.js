@@ -1,0 +1,51 @@
+const menu = [
+  {
+    name: "shack burger",
+    calories: 500,
+    cost: 5.29,
+    vegetarian: "no",
+    section: "burger",
+    img: "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_Burgers_ShackBurger_1500x920_lg1663589553.jpeg",
+  },
+  {
+    name: "smoke shack",
+    calories: 570,
+    cost: 6.84,
+    vegetarian: "no",
+    section: "burger",
+    img: "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_Burgers_SmokeShack_1500x920_lg1663589622.jpeg",
+  },
+  {
+    name: "shroom burger",
+    calories: 510,
+    cost: 6.99,
+    vegetarian: "yes",
+    section: "burger",
+    img: "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_Burgers_ShroomBurger_1500x920_lg1663589675.jpeg",
+  },
+  {
+    name: "grilled cheese",
+    calories: 510,
+    cost: 6.99,
+    vegetarian: "yes",
+    section: "burger",
+    img: "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_Burgers_GrilledCheese_1500x920_lg1674773167.jpeg",
+  },
+  {
+    name: "fries",
+    calories: 470,
+    cost: 2.99,
+    vegetarian: "yes",
+    section: "fries",
+    img: "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_CrinkleCutFries_Fries_1500x920_lg1663591933.jpeg",
+  },
+  {
+    name: "cheese fries",
+    calories: 710,
+    cost: 3.99,
+    vegetarian: "yes",
+    section: "fries",
+    img: "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_CrinkleCutFries_CheeseFries_1500x920_lg1663591946.jpeg",
+  },
+];
+export { menu };
