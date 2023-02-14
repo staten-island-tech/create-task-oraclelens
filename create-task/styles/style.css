@@ -1,3 +1,57 @@
 body{
-  background-color: rgb(74, 146, 74)
+  background-color: rgb(79, 136, 79);
+}
+
+#buttons{
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+  padding: 10px; 
+}
+
+#menuall, #patty, #cheese, #toppings, #vegetarian{
+  display: inline-block; 
+  cursor: pointer;
+  font-size:1.4rem; 
+  border-radius: 15px; 
+  width: 150px; 
+  height: 50px; 
+  background-color: rgb(123, 192, 123);
+  border: solid rgb(123, 192, 123) 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.imgheight{
+  height: 150px; 
+  border-radius: 50%;
+}
+
+#box{
+  margin: 30px;
+    border-radius: 5px;
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+}
+
+.inner{
+  font-size:0.8rem;
+  align-items: center;
+  text-align: center;
+  padding: 16px; 
+  background: rgb(123, 192, 123);
+  width: 300px; 
+  height: 300px; 
+  margin-bottom: 20px;
+  font-weight: 400;
+  border-radius: 50%;
+  border: white 10px;
+  color: black;
+}
+
+.cost, .cals{
+  font-size:1.2rem;
 }
