@@ -11,6 +11,7 @@ menu.forEach((el) => {
         <img class="imgheight" src="${el.img}" alt="add image">        
         <h2 class=cals>Calories: ${el.calories}</h2>
         <h3 class=cost>Price: ${el.cost}</h2>
+        <button class=add> Add To Cart </button>
         </div>`
   );
 });
@@ -28,11 +29,11 @@ const options = {
         DOMSelectors.box.insertAdjacentHTML(
           "beforeend",
           `
-        <div class="inner">
-        <h1>${el.name}</h1>
-        <img class="imgheight" src="${el.img}" alt="add image">        
-        <h2 class=cals>Calories: ${el.calories}</h2>
-        <h3 class=cost>Price: ${el.cost}</h2>
+          <div class="inner">
+          <h1>${el.name}</h1>
+          <img class="imgheight" src="${el.img}" alt="add image">        
+          <h2 class=cals>Calories: ${el.calories}</h2>
+          <h3 class=cost>Price: ${el.cost}</h2>
         </div>`
         );
       });
@@ -59,9 +60,8 @@ const options = {
         });
     });
   },
-
-  getCheese: function () {
-    document.getElementById("cheese").addEventListener("click", function () {
+  getFries: function () {
+    document.getElementById("fries").addEventListener("click", function () {
       remove();
       menu
         .filter((el) => el.section.includes("fries"))
@@ -70,63 +70,17 @@ const options = {
           DOMSelectors.box.insertAdjacentHTML(
             "beforeend",
             `
-            <div class="inner">
-            <h1>${el.name}</h1>
-            <img class="imgheight" src="${el.img}" alt="add image">        
-            <h2 class=cals>Calories: ${el.calories}</h2>
-            <h3 class=cost>Price: ${el.cost}</h2>
-            </div>`
+          <div class="inner">
+          <h1>${el.name}</h1>
+          <img class="imgheight" src="${el.img}" alt="add image">        
+          <h2 class=cals>Calories: ${el.calories}</h2>
+          <h3 class=cost>Price: ${el.cost}</h2>
+          </div>`
           );
         });
     });
-  },
-
-  getToppings: function () {
-    document.getElementById("toppings").addEventListener("click", function () {
-      remove();
-      menu
-        .filter((el) => el.section.includes("toppings"))
-        .forEach((el) => {
-          console.log(el.name);
-          DOMSelectors.box.insertAdjacentHTML(
-            "beforeend",
-            `
-            <div class="inner">
-            <h1>${el.name}</h1>
-            <img class="imgheight" src="${el.img}" alt="add image">        
-            <h2 class=cals>Calories: ${el.calories}</h2>
-            <h3 class=cost>Price: ${el.cost}</h2>
-            </div>`
-          );
-        });
-    });
-  },
-
-  getVegetarian: function () {
-    document
-      .getElementById("vegetarian")
-      .addEventListener("click", function () {
-        remove();
-        menu
-          .filter((el) => el.vegetarian.includes("yes"))
-          .forEach((el) => {
-            console.log(el.name);
-            DOMSelectors.box.insertAdjacentHTML(
-              "beforeend",
-              `
-            <div class="inner">
-            <h1>${el.name}</h1>
-            <img class="imgheight" src="${el.img}" alt="add image">        
-            <h2 class=cals>Calories: ${el.calories}</h2>
-            <h3 class=cost>Price: ${el.cost}</h2>
-            </div>`
-            );
-          });
-      });
   },
 };
 options.getAll();
 options.getBurger();
-options.getCheese();
-options.getToppings();
-options.getVegetarian();
+options.getFries();
