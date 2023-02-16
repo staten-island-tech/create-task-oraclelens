@@ -80,7 +80,30 @@ const options = {
         });
     });
   },
+  getVeg: function () {
+    document
+      .getElementById("vegetarian")
+      .addEventListener("click", function () {
+        remove();
+        menu
+          .filter((el) => el.vegetarian.includes("yes"))
+          .forEach((el) => {
+            console.log(el.name);
+            DOMSelectors.box.insertAdjacentHTML(
+              "beforeend",
+              `
+          <div class="inner">
+          <h1>${el.name}</h1>
+          <img class="imgheight" src="${el.img}" alt="add image">        
+          <h2 class=cals>Calories: ${el.calories}</h2>
+          <h3 class=cost>Price: ${el.cost}</h2>
+          </div>`
+            );
+          });
+      });
+  },
 };
 options.getAll();
 options.getBurger();
 options.getFries();
+options.getVeg();

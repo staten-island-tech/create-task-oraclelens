@@ -1,5 +1,7 @@
 body{
   background-color: rgb(79, 136, 79);
+  font-family: 'Manrope', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 #buttons{
@@ -9,15 +11,15 @@ body{
   padding: 10px; 
 }
 
-#menuall, #burger, #fries{
+#menuall, #burger, #fries, #vegetarian{
   display: inline-block; 
   cursor: pointer;
   font-size:1.4rem; 
   border-radius: 15px; 
   width: 150px; 
   height: 50px; 
-  background-color: rgb(123, 192, 123);
-  border: solid rgb(123, 192, 123) 10px;
+  background-color: rgb(255, 255, 255);
+  border: solid rgb(255, 255, 255) 10px;
   color: black;
   font-weight: bold;
 }
@@ -30,7 +32,7 @@ body{
   color: black;
   height: 40px; 
   border-radius: 15px; 
-  margin-top: -10px;
+  margin-top: -30px;
   font-weight: bold;
 
 }
@@ -41,9 +43,7 @@ body{
 }
 
 #box{
-    margin: 40px;
     border-radius: 5px;
-    padding-top: 10px; 
     padding-bottom: 20px;
     display: flex; 
     flex-wrap: wrap; 
@@ -68,4 +68,23 @@ body{
 
 .cost, .cals{
   font-size:1.2rem;
+}
+
+.maintitle{
+  text-align: center;
+  padding: 5px;
+  margin-top: 30px; 
+  margin-bottom: 30px;
+  background-color: white;
+  border: white 10px;
+  border-radius: 15px;
+  width: 800px;
+  font-size: 3rem; 
+}
+
+.titlecard{
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+  padding: 10px; 
 }

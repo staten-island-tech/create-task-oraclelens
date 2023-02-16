@@ -47,5 +47,13 @@ const menu = [
     section: "fries",
     img: "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_CrinkleCutFries_CheeseFries_1500x920_lg1663591946.jpeg",
   },
+  {
+    name: "Bacon Cheese Fries",
+    calories: 710,
+    cost: 4.99,
+    vegetarian: "no",
+    section: "fries",
+    img: "https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_CrinkleCutFries_BaconCheeseFries_1500x920_lg1663591959.jpeg",
+  },
 ];
 export { menu };
