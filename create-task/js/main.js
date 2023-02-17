@@ -34,6 +34,7 @@ const options = {
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
+          <button class=add> Add To Cart </button>
         </div>`
         );
       });
@@ -55,6 +56,7 @@ const options = {
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
+          <button class=add> Add To Cart </button>
           </div>`
           );
         });
@@ -75,6 +77,7 @@ const options = {
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
+          <button class=add> Add To Cart </button>
           </div>`
           );
         });
@@ -97,6 +100,7 @@ const options = {
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
+          <button class=add> Add To Cart </button>
           </div>`
             );
           });
