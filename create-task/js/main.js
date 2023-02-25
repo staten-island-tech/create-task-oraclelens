@@ -11,10 +11,24 @@ menu.forEach((el) => {
         <img class="imgheight" src="${el.img}" alt="add image">        
         <h2 class=cals>Calories: ${el.calories}</h2>
         <h3 class=cost>Price: ${el.cost}</h2>
-        <button class=add> Add To Cart </button>
+        <button id="add" class="add"> Add To Cart </button>
         </div>`
   );
 });
+
+function totalmoney() {
+  document.getElementById("add").addEventListener("click", function () {
+    let total = 0;
+
+    menu
+      .filter((el) => el.section.includes("burger"))
+      .forEach((el) => {
+        total += el.cost;
+      });
+
+    console.log(total);
+  });
+}
 
 const remove = function () {
   document.querySelectorAll(".inner").forEach((e) => e.remove());
@@ -34,7 +48,7 @@ const options = {
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
-          <button class=add> Add To Cart </button>
+          <button id="add" class="add"> Add To Cart </button>
         </div>`
         );
       });
@@ -56,7 +70,7 @@ const options = {
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
-          <button class=add> Add To Cart </button>
+          <button id="add" class="add"> Add To Cart </button>
           </div>`
           );
         });
@@ -77,7 +91,7 @@ const options = {
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
-          <button class=add> Add To Cart </button>
+          <button id="add" class="add"> Add To Cart </button>
           </div>`
           );
         });
@@ -100,7 +114,7 @@ const options = {
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
-          <button class=add> Add To Cart </button>
+          <button id="add" class="add"> Add To Cart </button>
           </div>`
             );
           });
@@ -111,3 +125,5 @@ options.getAll();
 options.getBurger();
 options.getFries();
 options.getVeg();
+
+totalmoney();
