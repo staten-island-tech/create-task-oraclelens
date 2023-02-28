@@ -6,29 +6,15 @@ menu.forEach((el) => {
   DOMSelectors.box.insertAdjacentHTML(
     "beforeend",
     `
-        <div class="inner">
+        <div id="inner" class="inner">
         <h1>${el.name}</h1>
         <img class="imgheight" src="${el.img}" alt="add image">        
         <h2 class=cals>Calories: ${el.calories}</h2>
         <h3 class=cost>Price: ${el.cost}</h2>
-        <button id="add" class="add"> Add To Cart </button>
+        <button id="add" class="add">Add To Cart</button>
         </div>`
   );
 });
-
-function totalmoney() {
-  document.getElementById("add").addEventListener("click", function () {
-    let total = 0;
-
-    menu
-      .filter((el) => el.section.includes("burger"))
-      .forEach((el) => {
-        total += el.cost;
-      });
-
-    console.log(total);
-  });
-}
 
 const remove = function () {
   document.querySelectorAll(".inner").forEach((e) => e.remove());
@@ -43,12 +29,12 @@ const options = {
         DOMSelectors.box.insertAdjacentHTML(
           "beforeend",
           `
-          <div class="inner">
+          <div id="inner" class="inner">
           <h1>${el.name}</h1>
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
-          <button id="add" class="add"> Add To Cart </button>
+          <button id="add" class="add">Add To Cart</button>
         </div>`
         );
       });
@@ -65,12 +51,12 @@ const options = {
           DOMSelectors.box.insertAdjacentHTML(
             "beforeend",
             `
-          <div class="inner">
+          <div id="inner" class="inner">
           <h1>${el.name}</h1>
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
-          <button id="add" class="add"> Add To Cart </button>
+          <button id="add" class="add">Add To Cart</button>
           </div>`
           );
         });
@@ -86,12 +72,12 @@ const options = {
           DOMSelectors.box.insertAdjacentHTML(
             "beforeend",
             `
-          <div class="inner">
+          <div id="inner" class="inner">
           <h1>${el.name}</h1>
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
-          <button id="add" class="add"> Add To Cart </button>
+          <button id="add" class="add">Add To Cart</button>
           </div>`
           );
         });
@@ -109,21 +95,38 @@ const options = {
             DOMSelectors.box.insertAdjacentHTML(
               "beforeend",
               `
-          <div class="inner">
+          <div id="inner" class="inner">
           <h1>${el.name}</h1>
           <img class="imgheight" src="${el.img}" alt="add image">        
           <h2 class=cals>Calories: ${el.calories}</h2>
           <h3 class=cost>Price: ${el.cost}</h2>
-          <button id="add" class="add"> Add To Cart </button>
+          <button id="add" class="add">Add To Cart</button>
           </div>`
             );
           });
       });
   },
 };
+
+// const add = function () {
+//   document.querySelectorAll(".inner").forEach(el) => el.insertAdjacentHTML(
+//     "beforeend",
+//     `
+//     `
+//   ));
+// };
+
+const cartoptions = {
+  addtocart: function () {
+    document.getElementById("add").addEventListener("click", function () {
+      add();
+    });
+  },
+};
+
+cartoptions.addtocart();
+
 options.getAll();
 options.getBurger();
 options.getFries();
 options.getVeg();
-
-totalmoney();

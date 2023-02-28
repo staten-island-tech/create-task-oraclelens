@@ -4,7 +4,7 @@ const DOMSelectors = {
   button3: document.getElementById("fries"),
   button4: document.querySelectorAll(".add"),
   box: document.getElementById("box"),
-  container: document.getElementById("container"),
+  cart: document.getElementById("cartdiv"),
 };
 
 export { DOMSelectors };
